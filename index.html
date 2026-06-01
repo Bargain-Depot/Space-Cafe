@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Cafe Shawarma</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff8ef;
+      color: #2b1d12;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 90vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1f1208;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    nav h2 {
+      color: #ffb347;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      font-size: 22px;
+      max-width: 700px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff8c1a;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .btn:hover {
+      background: #d96b00;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    h2.section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 35px;
+      color: #5c2e0f;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 850px;
+      margin: auto;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .menu-grid, .review-grid, .order-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #8b3f12;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      color: #ff8c1a;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .review {
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .review-name {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #5c2e0f;
+    }
+
+    .order-card {
+      text-align: center;
+    }
+
+    .order-card a {
+      display: block;
+      background: #2b1d12;
+      color: white;
+      padding: 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .order-card a:hover {
+      background: #ff8c1a;
+    }
+
+    footer {
+      background: #1f1208;
+      color: white;
+      text-align: center;
+      padding: 35px;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 8px;
+        display: inline-block;
+      }
+
+      header h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Space Cafe Shawarma</h2>
+    <div>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Space Cafe Shawarma</h1>
+    <p>Fresh Mediterranean flavor, halal shawarma, authentic spices, and friendly service.</p>
+    <a href="#menu" class="btn">View Menu</a>
+    <a href="#order" class="btn">Order Now</a>
+  </header>
+
+  <section>
+    <h2 class="section-title">Authentic Mediterranean Taste</h2>
+    <p class="about">
+      Space Cafe Shawarma serves fresh, flavorful Mediterranean-style food made with authentic Middle Eastern spices.
+      From juicy shawarma wraps to filling platters and fresh sides, every meal is made to be delicious, affordable,
+      and satisfying.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Our Menu</h2>
+
+    <div class="menu-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=80">
+        <h3>Chicken Shawarma Wrap</h3>
+        <p>Fresh pita filled with seasoned chicken, garlic sauce, vegetables, and pickles.</p>
+        <p class="price">$10–20</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1626776876729-bab4369a5a5a?auto=format&fit=crop&w=800&q=80">
+        <h3>Beef Shawarma Platter</h3>
+        <p>Tender beef shawarma served with rice, salad, sauce, and warm pita.</p>
+        <p class="price">$15–25</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593001872095-7d5b3868fb1d?auto=format&fit=crop&w=800&q=80">
+        <h3>Falafel Plate</h3>
+        <p>Crispy falafel with hummus, salad, tahini, and fresh pita.</p>
+        <p class="price">$10–20</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1542528180-a1208c5169a5?auto=format&fit=crop&w=800&q=80">
+        <h3>Mixed Grill</h3>
+        <p>A flavorful mix of grilled meats, rice, salad, and signature sauces.</p>
+        <p class="price">$20–30</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order">
+    <h2 class="section-title">Order Pickup or Delivery</h2>
+
+    <div class="order-grid">
+      <div class="card order-card">
+        <h3>DoorDash</h3>
+        <p>Order delivery or pickup through DoorDash.</p>
+        <a href="#" target="_blank">Order on DoorDash</a>
+      </div>
+
+      <div class="card order-card">
+        <h3>Uber Eats</h3>
+        <p>Get your favorites delivered through Uber Eats.</p>
+        <a href="#" target="_blank">Order on Uber Eats</a>
+      </div>
+
+      <div class="card order-card">
+        <h3>Postmates</h3>
+        <p>Order quickly through Postmates.</p>
+        <a href="#" target="_blank">Order on Postmates</a>
+      </div>
+
+      <div class="card order-card">
+        <h3>Seamless</h3>
+        <p>Find us on Seamless for easy delivery.</p>
+        <a href="#" target="_blank">Order on Seamless</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="review-grid">
+      <div class="card">
+        <p class="review">“So yummy 😍 very tasty food and friendly people.”</p>
+        <p class="review-name">Happy Customer</p>
+      </div>
+
+      <div class="card">
+        <p class="review">“I had an excellent experience! The atmosphere was very authentically Middle Eastern, including the smell of authentic spices. Every dish was absolutely delicious, and the staff were so nice.”</p>
+        <p class="review-name">Joseph A. Notaro</p>
+      </div>
+
+      <div class="card">
+        <p class="review">“It’s the best food I have ever eaten in my entire existence. Everyone should give it a chance — it’s gonna make you feel so much happier.”</p>
+        <p class="review-name">Jaafer Ahmed</p>
+      </div>
+
+      <div class="card">
+        <p class="review">“Wrap é muito gostoso!”</p>
+        <p class="review-name">Claudiane Coelho</p>
+      </div>
+
+      <div class="card">
+        <p class="review">“Muy buena la comida.”</p>
+        <p class="review-name">Rosalbina Campos</p>
+      </div>
+
+      <div class="card">
+        <p class="review">“The service at Space Coffee Halal Shawarma is friendly and efficient. The staff is always happy to answer questions and make recommendations.”</p>
+        <p class="review-name">Logan Biscuitos</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Visit Us</h2>
+    <p class="about">
+      Fresh shawarma, friendly service, and authentic Mediterranean flavor.
+      <br><br>
+      📍 Add restaurant address here  
+      <br>
+      📞 Add phone number here  
+      <br>
+      🕒 Add business hours here
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Space Cafe Shawarma. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
