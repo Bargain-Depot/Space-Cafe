@@ -238,3 +238,48 @@ footer {
     font-size: 17px;
   }
 }
+
+.menu-section {
+  margin-bottom: 55px;
+}
+
+.menu-section h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  color: var(--olive);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,.08);
+  border-left: 5px solid var(--gold);
+  transition: .3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.menu-item p {
+  color: var(--gold);
+  font-weight: bold;
+}
