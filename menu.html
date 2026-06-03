@@ -343,29 +343,6 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
-
-  <script>
-const sections = document.querySelectorAll('.menu-category');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-
-  });
-}, {
-  threshold: 0.15
-});
-
-sections.forEach(section => {
-  observer.observe(section);
-});
-</script>
-
   <script>
 const cards = document.querySelectorAll('.food-card');
 
@@ -381,6 +358,18 @@ const cardObserver = new IntersectionObserver((entries) => {
 
 cards.forEach(card => {
   cardObserver.observe(card);
+});
+</script>
+
+  <script>
+window.addEventListener("scroll", () => {
+  const menuTabs = document.querySelector(".menu-tabs");
+
+  if (window.scrollY > 250) {
+    menuTabs.classList.add("show");
+  } else {
+    menuTabs.classList.remove("show");
+  }
 });
 </script>
 
