@@ -449,8 +449,3 @@ nav.scrolled {
   opacity: 1;
   transform: translateY(0);
 }
-
-.menu-category.show {
-  opacity: 1;
-  transform: translateY(0);
-}
