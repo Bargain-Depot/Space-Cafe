@@ -415,7 +415,7 @@ html {
 }
 
 nav.scrolled {
-  background: rgba(73, 88, 62, 0.85);
+  background: rgba(43, 29, 18, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
