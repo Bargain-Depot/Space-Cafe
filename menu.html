@@ -18,7 +18,7 @@
     <h2>Space Cafe Shawarma</h2>
     <div>
       <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
+      <a href="index.html#specials">Specials</a>
       <a href="index.html#order">Order</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#contact">Contact</a>
@@ -350,6 +350,24 @@ const observer = new IntersectionObserver((entries) => {
 
 sections.forEach(section => {
   observer.observe(section);
+});
+</script>
+
+  <script>
+const cards = document.querySelectorAll('.food-card');
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+cards.forEach(card => {
+  cardObserver.observe(card);
 });
 </script>
 
