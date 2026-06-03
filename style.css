@@ -22,12 +22,14 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--olive);
   padding: 18px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+  background: transparent;
+  transition: all 0.4s ease;
 }
 
 nav h2 {
@@ -411,3 +413,12 @@ html {
     grid-template-columns: 1fr;
   }
 }
+
+nav.scrolled {
+  background: rgba(73, 88, 62, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0 5px 20px rgba(0,0,0,.15);
+}
+
