@@ -331,5 +331,27 @@
     <p>© 2026 Space Cafe Shawarma. All rights reserved.</p>
   </footer>
 
+  <script>
+const sections = document.querySelectorAll('.menu-category');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+
+  });
+}, {
+  threshold: 0.15
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
+
 </body>
 </html>
