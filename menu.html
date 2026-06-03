@@ -361,14 +361,14 @@ cards.forEach(card => {
 });
 </script>
 
-  <script>
+<script>
 window.addEventListener("scroll", () => {
   const menuTabs = document.querySelector(".menu-tabs");
 
   if (window.scrollY > 250) {
-    menuTabs.classList.add("show");
-  } else {
     menuTabs.classList.remove("show");
+  } else {
+    menuTabs.classList.add("show");
   }
 });
 </script>
